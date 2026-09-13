@@ -29,24 +29,14 @@ Prédire la probabilité qu'un client fasse défaut sur son crédit à partir de
 ### Interprétation
 Sur ce dataset de petite taille (1000 lignes), le **Logistic Regression** obtient les meilleures performances. C'est un résultat classique : les modèles complexes comme XGBoost ont tendance à sur-apprendre quand les données sont limitées.
 
-## Structure du projet
-credit-scoring/
-├── data/
-│ └── german_credit.csv # Dataset nettoyé
-├── notebooks/
-│ └── 01_credit_scoring.ipynb # Analyse + modélisation
-├── src/
-│ ├── download_data.py # Téléchargement du dataset
-│ ├── preprocessing.py # Nettoyage + SMOTE
-│ ├── model.py # Entraînement des modèles
-│ └── evaluation.py # Métriques + visualisations
-├── roc_curves.png # Courbes ROC
-├── confusion_matrix_xgboost.png
-├── feature_importance.png
-├── requirements.txt
-└── README.md
 
-
-
+## Installation
+```bash
+git clone https://github.com/sallaminatasy-hash/Credit-scoring.git
+cd Credit-scoring
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+jupyter notebook notebooks/01_credit_scoring.ipynb
 
 
